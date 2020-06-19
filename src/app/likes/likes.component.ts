@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LikesComponent implements OnInit {
   likes: number = 0;
+  dislikes: number = 0;
 
   likeThis() {
     this.likes++;
   }
 
   dislikeThis() {
-    if (this.likes > 0) {
-      this.likes--;
-    }
+    this.dislikes++;
   }
 
   constructor() { }

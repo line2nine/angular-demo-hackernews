@@ -1,0 +1,18 @@
+<button class="btn btn-primary" (click)="toggleAddnew()" id="toogle">{{btnName}}</button>
+<br>
+<br>
+<div *ngIf="!isShow">
+    <textarea id="artTitle" cols="70"></textarea>
+    <textarea id="artUrl" cols="70"></textarea>
+    <br>
+    <input class="btn btn-primary" (click)="addArticle()" type="button" value="Add">
+</div>
+<hr>
+<h2>Today's article</h2>
+
+<div *ngFor="let art of articles; let i = index">
+    <a href="{{art.url}}" target="_blank" id="{{++i}}">
+        <hr>{{art.title}}</a>
+    <br>
+    <app-likes></app-likes>
+</div>

@@ -1,17 +1,20 @@
-<!-- <app-form></app-form> -->
-<textarea id="artTitle" cols="70"></textarea>
-<textarea id="artUrl" cols="70"></textarea>
-<br>
-<input class="btn btn-primary" (click)="addArticle()" type="button" value="Add">
-<br>
-<br>
-<hr>
-<h2>Today's article</h2>
-<hr>
-<div *ngFor="let art of articles">
-  <a href="{{art.url}}" target="_blank"><hr>{{art.title}}</a>
-  <br>
-  <app-likes></app-likes>
+<div class="container">
+  <!-- Nav -->
+  <app-nav></app-nav>
+  <!-- End Nav -->
+
+  <!---------------------------------------------------------->
+
+  <!-- Content -->
+  <app-content></app-content>
+  <!-- End Content -->
+
+  <!---------------------------------------------------------->
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <app-footer></app-footer>
+  </footer>
+  <!-- End Footer -->
 </div>
-<hr>
-@CodeGym, 2020
