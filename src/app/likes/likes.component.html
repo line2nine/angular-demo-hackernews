@@ -1,7 +1,4 @@
-{{likes}} <i class="fa fa-thumbs-up" style="color: blue" id="like"></i>
+{{likes}} <i class="fa fa-thumbs-up" style="color: blue; cursor: pointer;" (click)="likeThis()"></i>
 &nbsp;
-{{dislikes}} <i class="fa fa-thumbs-down" style="color: red"></i>
+{{dislikes}} <i class="fa fa-thumbs-down" style="color: red; cursor: pointer;" (click)="dislikeThis()"></i>
 <br>
-<button (click)="likeThis()">Like</button>
-&nbsp;
-<button (click)="dislikeThis()">Dislike</button>

@@ -10,11 +10,19 @@ export class LikesComponent implements OnInit {
   dislikes: number = 0;
 
   likeThis() {
-    this.likes++;
+    if (!this.likes) {
+      this.likes++;
+    }
+    if (this.dislikes) {
+      this.dislikes--;
+    }
   }
 
   dislikeThis() {
-    this.dislikes++;
+    if (this.likes) {
+      this.dislikes++;
+      this.likes--;
+    }
   }
 
   constructor() { }
